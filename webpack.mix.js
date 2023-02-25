@@ -21,5 +21,8 @@ mix.styles('resources/css/frontend/*.css', 'public/css/frontend/theme.css');
 
 mix.scripts('resources/js/backend/*.js', 'public/js/backend/theme.js');
 mix.scripts('resources/js/frontend/*.js', 'public/js/frontend/theme.js');
+// frontend assets copying
+mix.styles('resources/frontend_assets/css/*.css', 'public/frontend_assets/css/style.css');
+mix.scripts('resources/frontend_assets/js/*.js', 'public/frontend_assets/js/script.js');
 
 mix.copyDirectory('resources/css/backend/fonts', 'public/css/fonts');

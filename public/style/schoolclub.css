@@ -1,0 +1,171 @@
+.school-club {
+    position: relative;
+    width: 100%;
+    background: url("../img/about page/school club.png");
+    height: 50rem;
+    background-size: cover;
+    background-position: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    margin-top: 8rem;
+}
+
+.school-club-container {
+    background: #003facd8;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 30%;
+    padding-left: 7rem;
+    padding-right: 3rem;
+}
+
+.club-data {
+    color: var(--white);
+}
+
+.school-club-container h2 {
+    margin: 2rem 0;
+}
+
+.club {
+    background-color: var(--red);
+    width: 100%;
+}
+
+.club-left {
+    width: 500rem;
+}
+
+.club-right h2 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+.club .svg {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.club-right p {
+    margin-bottom: 3rem;
+}
+
+.club button {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    background-color: var(--greyBG);
+    color: #000;
+    font-size: 3rem;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.parent {
+    background-color: var(--greyBG);
+    padding: 5rem 0;
+}
+
+.img {
+    width: 60rem;
+    margin: auto;
+}
+
+
+.why-us {
+    text-align: center;
+    margin: 5rem auto;
+}
+.why-us h2{
+    margin: 2rem 0;
+}
+.why-us p{
+    text-align: left;
+}
+
+.b-btn {
+    font-size: 1.4rem;
+    color: white;
+    padding: 1rem 2rem;
+    background: #000;
+    margin: 3rem 0;
+    border-radius: 2rem;
+}
+
+
+/* ------------------------ responsive -----------------  */
+@media (max-width: 1120px) {
+    .school-club-container{
+        display: none;
+    }
+    .school-club::after{
+        content: 'Our School Club';
+        text-align: center;
+        position: absolute;
+        font-size: 4rem;
+        font-weight: 700;
+        color: var(--white);
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.482);
+    }
+}
+@media (max-width: 920px){
+    .school-club{
+        background-position: right;
+    }
+    .club-container{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .club-left{
+        width: 50rem;
+    }
+    .club-right{
+        padding: 3rem;
+    }
+    .school-club{
+        position: relative;
+    background-position: center;
+
+    }
+    
+    
+}
+@media (max-width: 768px) {
+    .img{
+        width: 50rem;
+    }
+}
+@media (max-width: 578px) {
+    .img{
+        width: 40rem;
+    }
+}
+@media (max-width: 510px) {
+    .img{
+        width: 100%;
+    }
+    .club-left{
+        width: 100%;
+    }
+    
+}

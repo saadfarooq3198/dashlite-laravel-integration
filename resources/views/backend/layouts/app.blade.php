@@ -11,7 +11,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Fav Icon  -->
-    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" type="image/png">
+    <link rel="shortcut icon" href="{{ asset('../img/home page/logo.png') }}" type="image/png">
     
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}"/>

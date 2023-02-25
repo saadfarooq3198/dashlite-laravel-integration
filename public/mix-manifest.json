@@ -5,6 +5,8 @@
     "/css/frontend/theme.css": "/css/frontend/theme.css",
     "/js/backend/theme.js": "/js/backend/theme.js",
     "/js/frontend/theme.js": "/js/frontend/theme.js",
+    "/frontend_assets/css/style.css": "/frontend_assets/css/style.css",
+    "/frontend_assets/js/script.js": "/frontend_assets/js/script.js",
     "/css/fonts/bootstrap-icons.woff": "/css/fonts/bootstrap-icons.woff",
     "/css/fonts/bootstrap-icons.woff2": "/css/fonts/bootstrap-icons.woff2",
     "/css/fonts/DMSans-Bold.eot": "/css/fonts/DMSans-Bold.eot",

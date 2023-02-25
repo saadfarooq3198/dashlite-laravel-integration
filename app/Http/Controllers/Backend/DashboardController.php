@@ -14,7 +14,17 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('backend.layouts.app');
+        return view('backend.index');
+    }
+
+    public function curriculm()
+    {
+        return view('backend.curriculum');
+    }
+
+    public function almayeeyah()
+    {
+        return view('backend.almayeeyah');
     }
 
     /**

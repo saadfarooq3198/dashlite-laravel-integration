@@ -1,0 +1,95 @@
+.contact{
+    margin-top: 10rem;
+}
+.contact h4{
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+.should li{
+    list-style:disc;
+    margin: 1rem 2rem;
+}
+.blue-container{
+    background: var(--blue);
+    margin: 6rem auto;
+    color: var(--white);
+    position: relative;
+    padding: 4rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem 0 rgba(156, 156, 156, 0.792);
+}
+.blue-container p{
+    margin: 1rem 0;
+}
+.blue-container img {
+    position: absolute;
+    right: -6rem;
+    bottom: -9rem;
+}
+.l-para{
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+}
+
+/* -------- contact us form -----------------  */
+.contactUs{
+    background: url('../img/contact/bg.png');
+    background-position: center;
+    background-size: cover;
+    padding: 10rem;
+}
+.form{
+    color: var(--white);
+}
+.form p{
+    margin: 1rem 0;
+    max-width: 90%;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+}
+#form input, #form textarea{
+    margin: 1rem 0;
+    font-size: 1.8rem;
+    padding:  1rem;
+    border-radius: 1rem;
+    outline: none;
+    border: none;
+}
+#form .btn{
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    color: var(--black);
+    background-color: var(--white);
+    font-weight: 600;
+    align-self: flex-start;
+    border-radius: 2rem;
+}
+
+/* ------------------------- resposvie ---------------------  */
+@media (max-width: 996px) {
+    .contactUs{
+        padding: 2rem 6rem;
+    }
+    .form{
+    display: flex;
+    flex-direction: column;
+    }
+    #form{
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .blue-container img {
+        display: none;
+    }
+    
+}
+@media (max-width: 600px) {
+    .contactUs{
+        padding: 2rem 2rem;
+    }
+    
+}

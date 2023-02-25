@@ -1,0 +1,257 @@
+/* ---------------------------------------------------------------------------
+------------------------------ ethos section ------------------------------
+--------------------------------------------------------------------------- */
+
+.ethos {
+    background-color: #003eac;
+    width: 100%;
+    padding: 3rem 0;
+    /* margin: 0 auto; */
+    margin-top: 0;
+}
+
+.ethos-left {
+    width: 50rem;
+}
+
+.ethos-right .para-detail {
+    color: #fff;
+    margin-bottom: 3rem;
+}
+
+.ethod-big-img {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.ethod-big-img img {
+    display: inline-block;
+    margin: 4rem 0;
+    margin-left: -10rem;
+}
+
+/* --------------------------- enage ----------------------  */
+.engage {
+    background-color: #c40b0b;
+}
+
+.engage-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.engage-right {
+    background: url("../img/home page/image.png");
+    background-size: cover;
+    height: 40rem;
+}
+
+.engage-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 6rem;
+    color: white;
+    text-align: center;
+}
+
+.engage-left h2 {
+    margin: 1rem 0;
+}
+
+.engage-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.engage-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 3rem;
+    margin: 3rem 0;
+}
+
+.e-btn {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.571);
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+.e-btn-active {
+    background-color: var(--red);
+}
+.engage-slider {
+    width: 90%;
+    overflow: hidden;
+}
+
+.engage-slider button {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--grey);
+    color: var(--black);
+    font-size: 3rem;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.e-slider-div {
+    position: relative;
+    /* left: 100%; */
+    background: #c40b0bd8;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    padding: 0 2rem;
+}
+.engage-slider-div{
+    /* position: relative; */
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+
+}
+.slide {
+    flex: 1;
+  width: 100%;
+  height: 30rem;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  display: none;
+  margin: 0 1rem;
+    
+}
+
+#slide1 {
+    display: block;
+    opacity: 1;
+  }
+/* Define the active slide */
+.slide.active {
+    transform: translateX(0); /* Apply the transition effect to the current slide */
+  }
+
+  .slide.prev {
+    transform: translateX(-100%); /* Move the slide to the left */
+  }
+  
+  /* Define the next slide */
+  .slide.next {
+    transform: translateX(100%); /* Move the slide to the right */
+  }
+.e-slider-div img {
+    margin: 2rem 0;
+    opacity: 0.5;
+}
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #fff;
+    height: 15px;
+    width: 15px;
+}
+span.swiper-pagination-bullet {
+    width: 15px;
+    border: 1px solid #fff;
+    background: #fff;
+    height: 15px;
+}
+section.ethos.reveal {
+    margin-top: -81px;
+}
+.banner-text {
+    position: absolute;
+    display: flex;
+    margin: auto 0;
+    content: "";
+    left: 41%;
+}
+.banner-text h1{
+    color: #fff;
+    font-weight: 500;
+}
+/* ------------------------- responsiveness -----------------------  */
+@media (max-width: 1120px) {
+    .ethos-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 920px) {
+    .engage-container{
+        grid-template-columns: 1fr;
+    }
+    .engage-left{
+        padding: 5rem 4rem;
+        grid-row: 2;
+    }
+    .ethod-big-img img {
+        margin-left: -6rem;
+    }
+}
+@media (max-width: 500px) {
+    .ethos-left{
+        width: 100%;
+    }
+    .engage-right{
+        width: 100%;
+    }
+    .engage-btn{
+        gap: 1rem;
+    }
+    .e-btn{
+        font-size: 1rem;
+    }
+    .slide{
+        height: 25rem;
+        
+    }
+    
+    /* .engage-slider button {
+        display: none;
+    } */
+    .e-slider-div{
+        width: 100%;
+        
+    }
+    .ethod-big-img img{
+        margin-left: -3rem;
+    }
+    
+}
+@media (max-width: 350px) {
+    .engage-btn {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .e-slider-div p{
+        font-size: 1rem;
+    }
+    
+}

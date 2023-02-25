@@ -1,0 +1,287 @@
+.weekend {
+    position: relative;
+    width: 100%;
+    background: url("../img/about page/weekend.png");
+    height: 50rem;
+    background-size: cover;
+    background-position: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    margin-top: 8rem;
+    /* justify-content: flex-start; */
+    /* justify-content: center; */
+}
+
+.weekend-search {
+    background: #003fac;
+    height: 100%;
+    width: 30%;
+    padding-left: 5rem;
+}
+
+.weekend-data {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    width: 70%;
+}
+
+.weekend-search h2 {
+    line-height: 1;
+    margin: 2rem 0;
+}
+
+.week-form {
+    text-align: left;
+    width: 70%;
+}
+
+.weekend-search label {
+    font-size: 1.7rem;
+    color:var(--white);
+    font-weight: 600;
+}
+
+
+
+.g-btn {
+    background: var(--green);
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    border-radius: 2rem;
+    margin: 3rem 0;
+    cursor: pointer;
+}
+
+.school-value {
+    margin: 0 auto;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    text-align: center;
+}
+.school-value h2{
+    margin: 2rem 0;
+}
+.school-value p {
+    text-align: left;
+}
+
+.b-btn {
+    font-size: 1.4rem;
+    color: white;
+    padding: 1rem 2rem;
+    background: var(--black);
+    margin: 3rem 0;
+    border-radius: 2rem;
+}
+
+.admission {
+    position: relative;
+    background: var(--blue);
+    padding: 5rem 0;
+}
+
+
+.adms-card-cont {
+    gap: 4rem;
+}
+
+.adms-card {
+    width: 100%;
+    height: 27rem;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+.date {
+    font-size: 1.5rem;
+    font-weight: 400;
+    width: 100%;
+    background: #5e90ea;
+    padding: 1rem 2rem;
+}
+
+.card-down-d {
+    margin: 2rem;
+}
+
+.card-down-d p {
+    margin: 2rem 0;
+}
+
+.expr {
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+
+.gallery hr {
+    background: var(--black);
+}
+
+.gallery-card {
+    width: 80%;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: auto;
+}
+
+.review {
+    position: relative;
+    margin: 10rem auto;
+}
+
+.review h2 {
+    color: var(--black);
+}
+
+.review hr {
+    background: var(--black);
+}
+
+.testimonial {
+    position: relative;
+    max-width: 140rem;
+    margin: auto;
+    /* border : 2px solid black; */
+    
+}
+
+.rvw-profile img {
+    margin: 2rem 0;
+}
+
+.rvw-profile {
+    /* border-radius: 50%; */
+    width: 100%;
+    text-align: center;
+}
+.swiper-button-next4{
+    position: absolute;
+    top: 50%;
+    left: -4rem;
+    z-index: 99;
+    transform: translateY(-50%);
+}
+.swiper-button-prev4{
+    position: absolute;
+    top: 50%;
+    right: -4rem;
+    z-index: 99;
+    transform: translateY(-50%);
+}
+.swiper-button-next3{
+    position: absolute;
+    top: 50%;
+    left: 0rem;
+    z-index: 2;
+}
+.swiper-button-prev3{
+    position: absolute;
+    top: 50%;
+    right: 0rem;
+    z-index: 2;
+}
+.mySwiper3{
+    width: 85%;
+}
+.mySwiper4 {
+    width: 90%;
+}
+
+/* ------------------- responsivness ------------------  */
+@media (max-width: 1100px) {
+    .weekend{
+        position: relative;
+    }
+    .weekend::after{
+        content: 'Our Weekend Data';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.527);
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 4rem;
+        font-weight: 700;
+        text-align: center;
+        padding: 0 1rem;
+    }
+    .school-value{
+        margin-top: 36rem;
+    }
+    .weekend-search{
+    position: absolute;
+    background: #003fac;
+    height: 50%;
+    width: 100%;
+    top: 100%;
+    text-align: center;
+    padding-left: 0;
+    padding: 16rem 0;
+
+    }
+    .weekend-data{
+        transform: scale(1);
+    }
+    .week-form{
+        width: 100%;
+        text-align: center;
+    }
+    .select{
+        margin: auto;
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    .gallery-card{
+        width: 100%;
+        gap: 1rem;
+    }
+    
+}
+@media (max-width: 550px) {
+    .swiper-button-prev3{
+        right: -1rem;
+    }
+    .swiper-button-next3{
+        left: -1rem;
+    }
+    
+}
+@media (max-width: 500px) {
+    .rvw-profile img{
+        width: 80%;
+    }
+    .swiper-button-next4{
+        left: -3rem;
+    }
+    .swiper-button-prev4{
+        right: -3rem;
+    }
+    
+}
+@media (max-width: 430px) {
+    .weekend::after{
+        font-size: 3rem;
+    }
+    
+}

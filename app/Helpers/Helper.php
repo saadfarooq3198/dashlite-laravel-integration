@@ -48,3 +48,11 @@ function saveResizeImage($file, $directory, $width, $type = 'jpg')
     Storage::disk('public')->put($path, $resource, 'public');
     return $path;
 }
+
+function settings($page,$key){
+    $setting = \App\Models\Setting::where([
+        'page' => $page,
+        'key' => $key
+        ])->first();
+    return $setting ? $setting->value : null;
+}
