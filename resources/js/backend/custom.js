@@ -1,69 +1,69 @@
-// $(document).on('click', '.delete', function () {
-//     let url = $(this).data('url');
-//     let reload = $(this).data('reload');
-//     let tableId = '#' + $(this).data('table');
-//     let redirect = $(this).data('redirect');
-//     let callback = $(this).data('callback');
-//     let triggerred = $(this).data('triggerred');
-//     deleteConfirmation(url, tableId, reload, redirect, callback, triggerred);
-// });
+$(document).on('click', '.delete', function () {
+    let url = $(this).data('url');
+    let reload = $(this).data('reload');
+    let tableId = '#' + $(this).data('table');
+    let redirect = $(this).data('redirect');
+    let callback = $(this).data('callback');
+    let triggerred = $(this).data('triggerred');
+    deleteConfirmation(url, tableId, reload, redirect, callback, triggerred);
+});
 
-// function deleteConfirmation(url, tableId, reload = false, redirect = false, callback = false, triggerred=false) {
-//     window.swal.fire({
-//         title: 'Are you sure?',
-//         text: "You want to delete this record",
-//         icon: 'warning',
-//         showCancelButton: true,
-//         confirmButtonColor: '#3085d6',
-//         cancelButtonColor: '#d33',
-//         confirmButtonText: "Yes, delete it!"
-//     }).then((result) => {
-//         if (result.value) {
-//             window.swal.fire({
-//                 title: "",
-//                 text: "Please wait...",
-//                 showConfirmButton: false,
-//                 backdrop: true
-//             });
+function deleteConfirmation(url, tableId, reload = false, redirect = false, callback = false, triggerred=false) {
+    window.swal.fire({
+        title: 'Are you sure?',
+        text: "You want to delete this record",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+        if (result.value) {
+            window.swal.fire({
+                title: "",
+                text: "Please wait...",
+                showConfirmButton: false,
+                backdrop: true
+            });
 
-//             window.axios.delete(url).then(response => {
-//                 if (response.status === 200) {
-//                     window.swal.close();
-//                     // Show toast message
-//                     Toast.fire({
-//                         icon: 'success',
-//                         title: response.data.message
-//                     });
-//                     if(triggerred){
-//                         $(document).trigger(triggerred);
-//                     }
-//                     if (reload == true) {
-//                         window.location.reload();
-//                     }
+            window.axios.delete(url).then(response => {
+                if (response.status === 200) {
+                    window.swal.close();
+                    // Show toast message
+                    Toast.fire({
+                        icon: 'success',
+                        title: response.data.message
+                    });
+                    if(triggerred){
+                        $(document).trigger(triggerred);
+                    }
+                    if (reload == true) {
+                        window.location.reload();
+                    }
 
-//                     if (redirect) {
-//                         window.location.href = redirect;
-//                     }
+                    if (redirect) {
+                        window.location.href = redirect;
+                    }
 
-//                     if(callback){
-//                         window[callback]();
-//                     }
+                    if(callback){
+                        window[callback]();
+                    }
 
-//                     $(tableId).DataTable().ajax.reload();
+                    $(tableId).DataTable().ajax.reload();
 
 
-//                 }
-//             }).catch(error => {
-//                 window.swal.close();
-//                 // Show toast message
-//                 Toast.fire({
-//                     icon: 'error',
-//                     title: error.response.data.message
-//                 });
-//             });
-//         }
-//     });
-// }
+                }
+            }).catch(error => {
+                window.swal.close();
+                // Show toast message
+                Toast.fire({
+                    icon: 'error',
+                    title: error.response.data.message
+                });
+            });
+        }
+    });
+}
 
 function toastMessage(message = '', status = '') {
     status = status == '' ? 'error' : status;

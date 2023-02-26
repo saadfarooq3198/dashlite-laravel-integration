@@ -436,10 +436,10 @@ i.fa.fa-quote-left {
 .owl-prev:before {
   content: "previous";
 } */
-.owl-wrapper-outer:after {
+/* .owl-wrapper-outer:after {
   content: "Each summer we aim to run a fun-filled, informal sports day event. We run the sports day activities largely in Arabic and immerse the children in a world where fun, sports and games go together with Arabic.";
   font-size: 20px;
-}
+} */
 .owl-next {
   background: #c40b0b !important;
   opacity: 1 !important;

@@ -22,6 +22,21 @@ Route::middleware('auth')->name('admin.')->prefix('admin')->group(function () {
     Route::get('/', [Backend\DashboardController::class, 'index'])->name('index');
     Route::get('curriculm', [Backend\DashboardController::class, 'curriculm'])->name('curriculm');
     Route::get('almayeeyah', [Backend\DashboardController::class, 'almayeeyah'])->name('almayeeyah');
+    // about routes
+    Route::get('about/slider', [Backend\BannerController::class, 'aboutSlider'])->name('about.slider');
+    Route::get('about/datatable', [Backend\BannerController::class, 'bannerDatatable'])->name('about.banner.datatable');
+    Route::get('about/banner/create', [Backend\BannerController::class, 'create'])->name('about.banner.create');
+    Route::post('about/banner/store', [Backend\BannerController::class, 'store'])->name('about.banner.store');
+    Route::delete('about/banner/delete/{id}', [Backend\BannerController::class, 'destroy'])->name('about.banner.delete');
+    Route::get('about/banner/edit/{id}', [Backend\BannerController::class, 'edit'])->name('about.banner.edit');
+    Route::post('about/banner/update/{id}', [Backend\BannerController::class, 'update'])->name('about.banner.update');
+
+    Route::get('about/static', [Backend\BannerController::class, 'staticData'])->name('about.static');
+
+
+
+
+
 
     // Update Routes
     Route::post('save-home', [Backend\SettingController::class, 'index'])->name('update-home');

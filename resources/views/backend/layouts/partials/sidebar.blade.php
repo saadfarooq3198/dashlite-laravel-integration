@@ -48,7 +48,10 @@
                         </a>
                         <ul class="nk-menu-sub">
                             <li class="nk-menu-item">
-                                <a href="javascript:void(0)" class="nk-menu-link"><span class="nk-menu-text">Static Data</span></a>
+                                <a href="{{route('admin.about.slider')}}" class="nk-menu-link"><span class="nk-menu-text">Slider</span></a>
+                            </li>
+                            <li class="nk-menu-item">
+                                <a href="{{route('admin.about.static')}}" class="nk-menu-link"><span class="nk-menu-text">Static Data</span></a>
                             </li>
                             <li class="nk-menu-item">
                                 <a href="javascript:void(0)" class="nk-menu-link"><span class="nk-menu-text">Employees</span></a>

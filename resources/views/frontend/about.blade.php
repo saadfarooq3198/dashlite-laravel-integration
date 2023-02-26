@@ -20,7 +20,15 @@
 </head>
 
 <body>
- 
+  @php
+      $t = "ddfdff";
+  @endphp
+ <style>
+  .owl-wrapper-outer:after {
+  content: "{!! settings('about', 'special_events') !!}";
+  font-size: 20px;
+}
+ </style>
     @include("frontend.layouts.header")
     <div class="sticky-menu">
         <!-- --------------- menu ------------------  -->
@@ -94,12 +102,14 @@
      <!-- ---------------------------- landing page swiper ---------------------------  -->
      <div class="swiper mySwiper_custom backimg about-sli">
         <div class="swiper-wrapper about-sli">
-          <div class="swiper-slide flex-box"><img src="../img/home page/slide pic 1.png" alt="">
+          @foreach ($banners as $banner)
+            <div class="swiper-slide flex-box"><img src="{{asset('storage/images/'.$banner->banner)}}" alt="">
             <div class="banner-text">
               <h1>Welcome !</h1>
             </div>
           </div>
-          <div class="swiper-slide flex-box"><img src="../img/home page/slide pic 1.png" alt="">
+          @endforeach
+          {{-- <div class="swiper-slide flex-box"><img src="../img/home page/slide pic 1.png" alt="">
             <div class="banner-text">
               <h1>Welcome !</h1>
             </div>
@@ -118,7 +128,7 @@
             <div class="banner-text">
               <h1>Welcome !</h1>
             </div>
-          </div>
+          </div> --}}
         </div>
         <div class="swiper-pagination"></div>
         <div class="shadowbg"></div>
@@ -130,24 +140,7 @@
      
     <!-- ---------------- who's who ---------------------  -->
     <section  class="container who reveal">
-        <div class="hr-center-heading">
-            <h2>Who's Who!</h2>
-            <hr>
-        </div>
-
-        <p class="medium">The people who work in or act as consultants for the Arabic Club for Kids (TACK) are
-            joined together
-            with a shared vision and mission. Spring boarding from this everyone who works for us shares a
-            passion for teaching and learning to create an inclusive and relevant 21 st century culture at TACK,
-            welcoming all children wanting to learn Arabic as a language of today’s world, in a fun, caring and
-            evidence informed learning environment. Teachers who join our teaching community come with a
-            variety of prior qualifications relevant to teaching children and to Arabic, and all will have worked
-            through a hands on training and observation period and will also be engaged in continued
-            professional development. Consultants who work with us are deep listeners, and dedicated to
-            interactive communication. They provide frameworks, strategies and together with some Arabists
-            who work with us, we create a ‘Think-Tank’ and look at how these frameworks and strategies can be
-            applied to the language of Arabic, from its components to its whole, to inform our pedagogies,
-            resource production and publication.</p>
+      {!! settings('about', 'who_is_who') !!}
     </section>
  <!-- ------------- slider ------------------  -->
     <div class="slider-container" style="margin-top:5rem;">
@@ -308,18 +301,7 @@
       </div>
        <!-- ------------- slider end ------------------  -->
     <section class="research-development container reveal">
-        <div class="hr-center-heading">
-            <h2>Research & Developement</h2>
-            <hr>
-        </div>
-
-        <p>The Arabic Club for Kids was founded in 2007 in response to finding that the quality,
-            standards and choices for Arabic language learning for children fell short of good practice and lacked the
-            evidence informed, engaging delivery of learning environments that we should both insist on for our children
-            and those which they are used to in their daily schools in the UK. Driven by this, from its inception, The
-            Arabic Club for Kids thus made a dramatic impact through the changes it brought, making the learning of
-            Arabic child centric, fun and relevant through activity based learning strategies and resources that were
-            put into place. These were developed through strategic consultations with</p>
+       {!! settings('about', 'research_and_development') !!}
 
 
         <div class="programmer">
@@ -341,19 +323,7 @@
 
     <section class="news">
         <div class="news-container container reveal">
-            <div class="hr-center-heading">
-                <h2>Latest News and Events</h2>
-                <hr>
-            </div>
-
-            <p class="-b">Keeping Arabic relevant to the lives of the children and families that come to us
-                and making Arabic part of their enriching and fun-filled experiences is something that the Arabic Club
-                for Kids is increasingly active about. Unlike other skills children may learn, such as music, sports or
-                other skills, language is a realm of its own in our lives. It is after all a means of communication and
-                a means of access to information, which is fundamental/part and parcel of how we operate as human
-                beings, in all the above mentioned other skills that children may be learning. In today’s global world
-                multiple languages are in-play simultaneously. The events that the Arabic Club for Kids seeks to create,
-                and includes, social situations where fun-filled opportunities including Arabic and fun go together</p>
+          {!! settings('about', 'latest_news') !!}
 
             <div class="recent-upload flex-layout-sp">
                 <h5 class="bold">Our recent events over the past year include</h5>
@@ -597,7 +567,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="../scrolll.js"></script>
+    {{-- <script src="../scrolll.js"></script> --}}
 
  
 

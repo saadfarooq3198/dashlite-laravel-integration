@@ -105,7 +105,7 @@
           <hr class="b-red">
         </div>
 
-        <p class="m-3">{{settings('home', 'section_one_description')}}</p>
+        <p class="m-3">{!! settings('home', 'section_one_description') !!}</p>
 
         <img src="../img/home page/Group.svg" alt="" class="svg">
       </div>
@@ -119,7 +119,7 @@
           <hr class="b-green">
         </div>
         <p class="m-3">
-          {{settings('home', 'section_two_description')}}
+          {!! settings('home', 'section_two_description') !!}
         </p>
         <img src="../img/home page/Group-1.svg" alt="" class="svg">
 
@@ -139,7 +139,7 @@
           <hr class="b-blue">
         </div>
         <p class="m-3">
-          {{settings('home', 'section_three_description')}}
+          {!! settings('home', 'section_three_description') !!}
         </p>
 
 
@@ -156,7 +156,7 @@
           <hr class="b-yellow">
         </div>
         <p class="m-3">
-          {{settings('home', 'section_four_description')}}
+          {!! settings('home', 'section_four_description') !!}
         </p>
 
         <img src="../img/home page/Group-3.svg" alt="" class="svg">

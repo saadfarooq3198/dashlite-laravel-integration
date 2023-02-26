@@ -53,7 +53,7 @@
                         <div class="form-group">
                             <label class="form-label" for="email-address-1">Section-I description</label>
                             <div class="form-control-wrap">
-                                <textarea name="section_one_description" class="form-control">{{settings('home', 'section_one_description')}}
+                                <textarea name="section_one_description" class="form-control summernote" data-feature="all">{!! settings('home', 'section_one_description') !!}
                                 </textarea>
                             </div>
                         </div>
@@ -85,7 +85,7 @@
                         <div class="form-group">
                             <label class="form-label" for="email-address-1">Section-II description</label>
                             <div class="form-control-wrap">
-                                <textarea name="section_two_description" class="form-control">{{settings('home', 'section_two_description')}}
+                                <textarea name="section_two_description" class="form-control summernote" data-feature="all">{!! settings('home', 'section_two_description') !!}
                                 </textarea>
                             </div>
                         </div>
@@ -118,7 +118,7 @@
                         <div class="form-group">
                             <label class="form-label" for="email-address-1">Section-III description</label>
                             <div class="form-control-wrap">
-                                <textarea name="section_three_description" class="form-control">{{settings('home', 'section_three_description')}}
+                                <textarea name="section_three_description" class="form-control summernote" data-feature="all">{!! settings('home', 'section_three_description') !!}
                                 </textarea>
                             </div>
                         </div>
@@ -150,7 +150,7 @@
                         <div class="form-group">
                             <label class="form-label" for="email-address-1">Section-IV description</label>
                             <div class="form-control-wrap">
-                                <textarea name="section_four_description" class="form-control">{{settings('home', 'section_four_description')}}
+                                <textarea name="section_four_description" class="form-control summernote" data-feature="all">{!! settings('home', 'section_four_description') !!}
                                 </textarea>
                             </div>
                         </div>
@@ -165,5 +165,16 @@
             </form>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+
+    <script>
+    $(document).ready(function() {
+        $('.summernote').summernote({
+          placeholder: '',
+        //   tabsize: 2,
+          height: 150
+        });
+    });
+      </script>
 @endsection
 <!-- include libraries(jQuery, bootstrap) -->
