@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Models\Event;
 use App\Models\Banner;
 use App\Models\Setting;
+use App\Models\Employee;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -15,7 +17,10 @@ class HomeController extends Controller
 
     public function about(){
         $banners = Banner::where('page', 'about')->take(5)->latest()->get();
-        return view('frontend.about', compact('banners'));
+        $employees = Employee::all();
+        $events = Event::all();
+        $specialEvents = Event::where('is_special', 'special')->get();
+        return view('frontend.about', compact('banners', 'employees', 'events', 'specialEvents'));
     }
 
     public function almayeeyah(){

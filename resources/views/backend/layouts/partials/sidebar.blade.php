@@ -54,16 +54,16 @@
                                 <a href="{{route('admin.about.static')}}" class="nk-menu-link"><span class="nk-menu-text">Static Data</span></a>
                             </li>
                             <li class="nk-menu-item">
-                                <a href="javascript:void(0)" class="nk-menu-link"><span class="nk-menu-text">Employees</span></a>
+                                <a href="{{route('admin.employees.index')}}" class="nk-menu-link"><span class="nk-menu-text">Employees</span></a>
                             </li>
-                            <li class="nk-menu-item">
+                            {{-- <li class="nk-menu-item">
                                 <a href="javascript:void(0)" class="nk-menu-link"><span class="nk-menu-text">Research</span></a>
-                            </li>
-                            <li class="nk-menu-item">
+                            </li> --}}
+                            {{-- <li class="nk-menu-item">
                                 <a href="javascript:void(0)" class="nk-menu-link"><span class="nk-menu-text">Recent Events</span></a>
-                            </li>
+                            </li> --}}
                             <li class="nk-menu-item">
-                                <a href="javascript:void(0)" class="nk-menu-link"><span class="nk-menu-text">Special Events</span></a>
+                                <a href="{{route('admin.events.index')}}" class="nk-menu-link"><span class="nk-menu-text">Events</span></a>
                             </li>
                         </ul><!-- .nk-menu-sub -->
                     </li><!-- .nk-menu-item -->

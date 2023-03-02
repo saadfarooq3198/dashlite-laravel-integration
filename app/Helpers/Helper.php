@@ -4,6 +4,12 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
+
+function addEllipsis($text, $max = 30)
+{
+    return strlen($text) > $max ? mb_substr($text, 0, $max, "UTF-8") . "..." : $text;
+}
+
 function getFullName($user)
 {
     return ucwords($user->first_name . ' ' . $user->last_name);

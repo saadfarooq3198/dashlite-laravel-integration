@@ -24,12 +24,22 @@ Route::middleware('auth')->name('admin.')->prefix('admin')->group(function () {
     Route::get('almayeeyah', [Backend\DashboardController::class, 'almayeeyah'])->name('almayeeyah');
     // about routes
     Route::get('about/slider', [Backend\BannerController::class, 'aboutSlider'])->name('about.slider');
+    // banner routes
     Route::get('about/datatable', [Backend\BannerController::class, 'bannerDatatable'])->name('about.banner.datatable');
     Route::get('about/banner/create', [Backend\BannerController::class, 'create'])->name('about.banner.create');
     Route::post('about/banner/store', [Backend\BannerController::class, 'store'])->name('about.banner.store');
     Route::delete('about/banner/delete/{id}', [Backend\BannerController::class, 'destroy'])->name('about.banner.delete');
     Route::get('about/banner/edit/{id}', [Backend\BannerController::class, 'edit'])->name('about.banner.edit');
     Route::post('about/banner/update/{id}', [Backend\BannerController::class, 'update'])->name('about.banner.update');
+
+    // employee routes
+    Route::resource('employees', Backend\EmployeeController::class);
+    Route::get('about/employee', [Backend\EmployeeController::class, 'employeeDatatable'])->name('about.employee.datatable');
+    
+    // event routes
+    Route::resource('events', Backend\EventController::class);
+    Route::get('about/event', [Backend\EventController::class, 'eventDatatable'])->name('about.event.datatable');
+
 
     Route::get('about/static', [Backend\BannerController::class, 'staticData'])->name('about.static');
 
