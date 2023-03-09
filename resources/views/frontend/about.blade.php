@@ -20,9 +20,6 @@
 </head>
 
 <body>
-  @php
-      $t = "ddfdff";
-  @endphp
  <style>
   .owl-wrapper-outer:after {
   content: "{!! settings('about', 'special_events') !!}";

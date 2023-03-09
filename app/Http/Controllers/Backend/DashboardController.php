@@ -27,4 +27,32 @@ class DashboardController extends Controller
         return view('backend.almayeeyah');
     }
 
+    public function ethos(){
+        return view('backend.ethos');
+    }
+
+    public function partnership(){
+        return view('backend.partnership');
+    }
+
+    public function contact(){
+        return view('backend.contact');
+    }
+
+    public function feeStructure(){
+        return view('backend.fee');
+    }
+
+    public function footer(){
+        return view('backend.footer');
+    }
+
+    public function weekPop(){
+        return view('backend.week_pop');
+    }
+
+    public function research(){
+        return view('backend.research');
+    }
+
 }

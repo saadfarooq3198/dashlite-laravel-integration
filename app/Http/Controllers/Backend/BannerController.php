@@ -30,7 +30,7 @@ class BannerController extends Controller
                 $file = $request->file('banner');
                 $file->storeAs('public/images', $file->getClientOriginalName());
                 Banner::create([
-                    'page' =>  'about',
+                    'page' =>  $request->page_name,
                     'banner' => $file->getClientOriginalName()
                 ]);
             }
@@ -71,10 +71,13 @@ class BannerController extends Controller
 
     public function update(Request $request, $id){
         try {
-            if ($request->has('banner')) {
+            Banner::WHERE('id', $id)->update([
+                'page' =>  $request->page_name,
+            ]);            if ($request->has('banner')) {
                 $file = $request->file('banner');
                 $file->storeAs('public/images', $file->getClientOriginalName());
                 Banner::WHERE('id', $id)->update([
+                    'page' =>  $request->page_name,
                     'banner' => $file->getClientOriginalName()
                 ]);
             }
@@ -93,7 +96,7 @@ class BannerController extends Controller
     
     public function bannerDatatable(Request $request){
         if ($request->ajax()) {
-            $banner = Banner::where('page', 'about')->get();
+            $banner = Banner::all();
             return DataTables::of($banner)
                 ->addColumn('banner', function ($row) {
                     $banner = '

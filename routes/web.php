@@ -24,13 +24,34 @@ Route::middleware('auth')->name('admin.')->prefix('admin')->group(function () {
     Route::get('almayeeyah', [Backend\DashboardController::class, 'almayeeyah'])->name('almayeeyah');
     // about routes
     Route::get('about/slider', [Backend\BannerController::class, 'aboutSlider'])->name('about.slider');
-    // banner routes
+    //about banner routes
     Route::get('about/datatable', [Backend\BannerController::class, 'bannerDatatable'])->name('about.banner.datatable');
     Route::get('about/banner/create', [Backend\BannerController::class, 'create'])->name('about.banner.create');
     Route::post('about/banner/store', [Backend\BannerController::class, 'store'])->name('about.banner.store');
     Route::delete('about/banner/delete/{id}', [Backend\BannerController::class, 'destroy'])->name('about.banner.delete');
     Route::get('about/banner/edit/{id}', [Backend\BannerController::class, 'edit'])->name('about.banner.edit');
     Route::post('about/banner/update/{id}', [Backend\BannerController::class, 'update'])->name('about.banner.update');
+
+    // ethos routes
+    Route::get('ethos', [Backend\DashboardController::class, 'ethos'])->name('ethos');
+
+    // partnership routes
+    Route::get('partnership', [Backend\DashboardController::class, 'partnership'])->name('partnership');
+
+    // contact routes
+    Route::get('contact', [Backend\DashboardController::class, 'contact'])->name('contact');
+
+    // fee-structure routes
+    Route::get('fee-structure', [Backend\DashboardController::class, 'feeStructure'])->name('fee-structure');
+
+    // footer routes
+    Route::get('footer', [Backend\DashboardController::class, 'footer'])->name('footer');
+
+    // week pop routes
+    Route::get('week-pop', [Backend\DashboardController::class, 'weekPop'])->name('week-pop');
+
+    // research routes
+    Route::get('research', [Backend\DashboardController::class, 'research'])->name('research');
 
     // employee routes
     Route::resource('employees', Backend\EmployeeController::class);

@@ -36,6 +36,12 @@
                         </a>
                     </li><!-- .nk-menu-item -->
                     <li class="nk-menu-item">
+                        <a href="{{route('admin.about.slider')}}" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-file-plus-fill"></em></em></span>
+                            <span class="nk-menu-text">Banner</span>
+                        </a>
+                    </li>
+                    <li class="nk-menu-item">
                         <a href="{{route('admin.curriculm')}}" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-calendar-booking-fill"></em></em></span>
                             <span class="nk-menu-text">Curriculum</span>
@@ -47,9 +53,9 @@
                             <span class="nk-menu-text">About us</span>
                         </a>
                         <ul class="nk-menu-sub">
-                            <li class="nk-menu-item">
+                            {{-- <li class="nk-menu-item">
                                 <a href="{{route('admin.about.slider')}}" class="nk-menu-link"><span class="nk-menu-text">Slider</span></a>
-                            </li>
+                            </li> --}}
                             <li class="nk-menu-item">
                                 <a href="{{route('admin.about.static')}}" class="nk-menu-link"><span class="nk-menu-text">Static Data</span></a>
                             </li>
@@ -69,7 +75,7 @@
                     </li><!-- .nk-menu-item -->
                    
                     <li class="nk-menu-item">
-                        <a href="javascript:void(0)" class="nk-menu-link">
+                        <a href="{{route('admin.ethos')}}" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-layers"></em></span>
                             <span class="nk-menu-text">Ethos</span>
                         </a>
@@ -81,19 +87,25 @@
                         </a>
                     </li>
                     <li class="nk-menu-item">
-                        <a href="javascript:void(0)" class="nk-menu-link">
+                        <a href="{{route('admin.partnership')}}" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-users-fill"></em></span>
+                            <span class="nk-menu-text">Partnership</span>
+                        </a>
+                    </li>
+                    <li class="nk-menu-item">
+                        <a href="{{route('admin.contact')}}" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-contact-fill"></em></span>
                             <span class="nk-menu-text">Contact</span>
                         </a>
                     </li>
                     <li class="nk-menu-item">
-                        <a href="javascript:void(0)" class="nk-menu-link">
+                        <a href="{{route('admin.fee-structure')}}" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-money"></em></span>
                             <span class="nk-menu-text">Fee Structure</span>
                         </a>
                     </li>
                     <li class="nk-menu-item">
-                        <a href="javascript:void(0)" class="nk-menu-link">
+                        <a href="{{route('admin.research')}}" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-building"></em></span>
                             <span class="nk-menu-text">Research and development</span>
                         </a>
@@ -117,13 +129,13 @@
                         </a>
                     </li>
                     <li class="nk-menu-item">
-                        <a href="javascript:void(0)" class="nk-menu-link">
+                        <a href="{{route('admin.week-pop')}}" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-bag"></em></span>
                             <span class="nk-menu-text">Week POP</span>
                         </a>
                     </li>
                     <li class="nk-menu-item">
-                        <a href="javascript:void(0)" class="nk-menu-link">
+                        <a href="{{route('admin.footer')}}" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-bag"></em></span>
                             <span class="nk-menu-text">Footer</span>
                         </a>

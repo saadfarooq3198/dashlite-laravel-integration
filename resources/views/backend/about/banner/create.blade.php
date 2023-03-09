@@ -12,6 +12,13 @@
     </div>
     <div class="modal-body">
         
+        <div class="form-group">
+            <label class="form-label" for="pagename">Select Page</label>
+            <select name="page_name" class="form-control" id="pagename">
+                <option value="About">About</option>
+                <option value="Ethos">Ethos</option>
+            </select>
+        </div>
     
         <div class="form-group">
             <label class="form-label" for="customFileLabel">Upload Banner Image</label>

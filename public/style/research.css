@@ -1,17 +1,3 @@
-.research-container {
-    position: relative;
-    width: 100%;
-    height: 50rem;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
-        url("../img/reserch & community page/Bitmap.png");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../img/reserch & community page/Bitmap.png");
-    background-position: center;
-    background-size: cover;
-    flex-direction: column;
-    margin-top: 8rem;
-    color: white;
-}
 .research-container h2{
     margin: 5rem 0;
 }

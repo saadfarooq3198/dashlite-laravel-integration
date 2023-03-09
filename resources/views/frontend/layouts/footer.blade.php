@@ -7,18 +7,17 @@
         <div class="f-logo">
           <img src="../img/home page/footer.svg" alt="footer logo">
           <div>
-            <p class="s-para">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-              tincidunt ut laoreet dolore magna aliquam erat.</p>
+            <p class="s-para">{!! settings('footer', 'section_one_description') !!}</p>
           </div>
         </div>
         <ul class="social-media">
-          <li class="media-icon"><a href="" class="media-link"><iconify-icon
+          <li class="media-icon"><a href="{{settings('footer', 'facebook')}}" class="media-link"><iconify-icon
                 icon="ic:round-facebook"></iconify-icon></a></li>
-          <li class="media-icon"><a href="" class="media-link"><iconify-icon
+          <li class="media-icon"><a href="{{settings('footer', 'twitter')}}" class="media-link"><iconify-icon
                 icon="entypo-social:twitter-with-circle"></iconify-icon></a></li>
-          <li class="media-icon"><a href="" class="media-link"><iconify-icon
+          <li class="media-icon"><a href="{{settings('footer', 'instagram')}}" class="media-link"><iconify-icon
                 icon="bxl:instagram-alt"></iconify-icon></a></li>
-          <li class="media-icon"><a href="" class="media-link"><iconify-icon
+          <li class="media-icon"><a href="{{settings('footer', 'linkedin')}}" class="media-link"><iconify-icon
                 icon="entypo-social:linkedin-with-circle"></iconify-icon></a></li>
         </ul>
       </div>
@@ -27,8 +26,8 @@
       <div class="f-middle">
         <!-- ------------ number section ------------------  -->
         <div class="number-section">
-          <h5 class="semi-bold m-2">For enquiries: <span>02079939010</span></h5>
-          <h5 class="semi-bold m-2">For in school enquiries: <span> 07958 072 782</span></h5>
+          <h5 class="semi-bold m-2">For enquiries: <span>{{settings('footer', 'for_enquiries')}}</span></h5>
+          <h5 class="semi-bold m-2">For in school enquiries: <span> {{settings('footer', 'for_in_school_enquiries')}}</span></h5>
 
           <div class="search-div reverse">
             <h5 class="semi-bold m-2">Subscribe to Newsletter</h5>

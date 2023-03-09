@@ -50,7 +50,7 @@ class SettingController extends Controller
            
             return response()->json([
                 'status' => 200,
-                'message' => 'Home Page Updated Successfully',
+                'message' => 'Page Updated Successfully',
             ], JsonResponse::HTTP_OK);
         } catch (Exception$e) {
             return response()->json([

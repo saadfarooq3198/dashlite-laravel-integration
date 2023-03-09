@@ -11,7 +11,13 @@
         <a href="#" class="close" data-dismiss="modal"><em class="icon ni ni-cross-sm"></em></a>
     </div>
     <div class="modal-body">
-        
+        <div class="form-group">
+            <label class="form-label" for="pagename">Select Page</label>
+            <select name="page_name" class="form-control" id="pagename">
+                <option {{$banner->page == 'About' ? 'selected' : ' '}} value="About">About</option>
+                <option {{$banner->page == 'Ethos' ? 'selected' : ' '}} value="Ethos">Ethos</option>
+            </select>
+        </div>
     
         <div class="form-group">
             <label class="form-label" for="customFileLabel">Upload Banner Image</label>
