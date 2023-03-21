@@ -88,52 +88,37 @@
 
     <section class="contact container reveal">
         <div class="hr-center-heading">
-            <h2>Staff Vacancies</h2>
+            <h2>{{settings('contact', 'section_one_heading')}}</h2>
             <hr>
         </div>
         <img src="../img/contact/pink svg.svg" alt="" class="svg">
-        <p class="medium">If you are interested in working with us a teacher in our school, kindly send us your CV to
-            info@arabicclub.co.uk. Even if we don’t have immediate vacancies we can keep your CV and contact you if a
-            vacancy comes up as we are in the process of expanding our branches around London and the UK and also expand
-            our number of classes within branches.</p>
+        <p class="medium">{!! settings('contact', 'section_one_description') !!}</p>
 
-        <h4 class="h-red medium">All applicants should:</h4>
+        <h4 class="h-red medium">{{settings('contact', 'section_two_heading')}}</h4>
 
         <ul class="should">
-            <li class="sb-para medium">Be fluent in Arabic both written and spoken Modern Standard/ Fusha as well as
-                dialect.</li>
-            <li class="sb-para medium">Have a range of skills in early years and early childhood between the ages of 3-14
-            </li>
-            <li class="sb-para medium">Have prior teaching experience</li>
+          {!! settings('contact', 'section_two_description') !!}
         </ul>
     </section>
 
     <section class="small-container blue-container reveal">
-        <p class="medium">All applicants that are offered a job will be given a job role and be given an offer. All
-            those who join will receive a contract. This will include <b>(This will 5 Saturdays/Sundays of working at
-                the school at a training rate)</b> which they would need to complete successfully. After this applicants
-            will start working with us at their rate of pay as agreed.</p>
+        <p class="medium">{!! settings('contact', 'section_three_description') !!}</p>
 
-        <p class="bold">Please note we cannot currently arrange visas and require applicants to be able to make their
-            own arrangements if necessary.</p>
+        
 
         <img src="../img/contact/alpha.svg" alt="" class="svg">
     </section>
 
     <section class="small-container center reveal">
-        <p class="l-para">If you are interested in working with us please call us at <span class="h-red">020 79939010</span> or you can mail us at <span class="h-red bold">Info@arabicclub.co.uk</span></p>
+        <p class="l-para">{!! settings('contact', 'section_four_description') !!}</p>
     </section>
 
 <!-- --------------------- contact us ---------------------------  -->
     <section class="contactUs reveal">
         <div class="form flex-layout-sp small-container">
             <div class="c-detail">
-                <h2 class="h-white">Contact Us</h2>
-                <p class="h-yellow">You can send us any questions  or comments and we will contact you soon</p>
-
-                <p>For enrolment or other  while in-school</p>
-                <p class="bold">South London Branch: 07958072728</p>
-                <p class="bold">North London Branch: 07958072728</p>
+                <h2 class="h-white">{{settings('contact', 'section_five_heading')}}</h2>
+                <p class="h-yellow">{!! settings('contact', 'section_five_description') !!}</p>
             </div>
 
             <form action="" id="form">

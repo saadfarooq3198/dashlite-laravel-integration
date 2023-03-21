@@ -121,12 +121,9 @@
 
 
     <section class="school-value container reveal">
-        <h2>Our School Values</h2>
+        <h2>{{settings('weekend', 'section_one_heading')}}</h2>
 
-        <p class="medium">Our school is run as an Arabic language school (we do not teach religion). We believe in
-            welcoming all children who want to learn the beautiful Arabic language as it exists in our 21st Century
-            world today, as a live, dynamic modern language and also exudes which a rich culture, history and history of
-            literature, to enable and empower children to use and apply Arabic as relevant in their lives.</p>
+        <p class="medium">{!! settings('weekend', 'section_one_description') !!}</p>
 
         <a href="#" class="b-btn">Read More</a>
 

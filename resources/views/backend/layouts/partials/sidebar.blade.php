@@ -53,21 +53,14 @@
                             <span class="nk-menu-text">About us</span>
                         </a>
                         <ul class="nk-menu-sub">
-                            {{-- <li class="nk-menu-item">
-                                <a href="{{route('admin.about.slider')}}" class="nk-menu-link"><span class="nk-menu-text">Slider</span></a>
-                            </li> --}}
+                           
                             <li class="nk-menu-item">
                                 <a href="{{route('admin.about.static')}}" class="nk-menu-link"><span class="nk-menu-text">Static Data</span></a>
                             </li>
                             <li class="nk-menu-item">
                                 <a href="{{route('admin.employees.index')}}" class="nk-menu-link"><span class="nk-menu-text">Employees</span></a>
                             </li>
-                            {{-- <li class="nk-menu-item">
-                                <a href="javascript:void(0)" class="nk-menu-link"><span class="nk-menu-text">Research</span></a>
-                            </li> --}}
-                            {{-- <li class="nk-menu-item">
-                                <a href="javascript:void(0)" class="nk-menu-link"><span class="nk-menu-text">Recent Events</span></a>
-                            </li> --}}
+                         
                             <li class="nk-menu-item">
                                 <a href="{{route('admin.events.index')}}" class="nk-menu-link"><span class="nk-menu-text">Events</span></a>
                             </li>
@@ -111,23 +104,46 @@
                         </a>
                     </li>
                     <li class="nk-menu-item">
-                        <a href="javascript:void(0)" class="nk-menu-link">
+                        <a href="{{route('admin.school-club')}}" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-book-read"></em></span>
                             <span class="nk-menu-text">School Club</span>
                         </a>
                     </li>
-                    <li class="nk-menu-item">
-                        <a href="javascript:void(0)" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-building"></em></span>
+                   
+                    <li class="nk-menu-item has-sub">
+                        <a href="javascript:void(0)" class="nk-menu-link nk-menu-toggle">
+                            <span class="nk-menu-icon"><em class="icon ni ni-aperture"></em></span>
                             <span class="nk-menu-text">Our Classes</span>
                         </a>
-                    </li>
-                    <li class="nk-menu-item">
-                        <a href="javascript:void(0)" class="nk-menu-link">
+                        <ul class="nk-menu-sub">
+                           
+                            <li class="nk-menu-item">
+                                <a href="{{route('admin.class.static')}}" class="nk-menu-link"><span class="nk-menu-text">Static Data</span></a>
+                            </li>
+                            <li class="nk-menu-item">
+                                <a href="{{route('admin.classes.index')}}" class="nk-menu-link"><span class="nk-menu-text">Classes</span></a>
+                            </li>
+                        </ul><!-- .nk-menu-sub -->
+                    </li><!-- .nk-menu-item -->
+                   
+                    <li class="nk-menu-item has-sub">
+                        <a href="javascript:void(0)" class="nk-menu-link nk-menu-toggle">
                             <span class="nk-menu-icon"><em class="icon ni ni-aperture"></em></span>
                             <span class="nk-menu-text">Weekend</span>
                         </a>
-                    </li>
+                        <ul class="nk-menu-sub">
+                           
+                            <li class="nk-menu-item">
+                                <a href="{{route('admin.weekend')}}" class="nk-menu-link"><span class="nk-menu-text">Static Data</span></a>
+                            </li>
+                            <li class="nk-menu-item">
+                                <a href="{{route('admin.image-gallery')}}" class="nk-menu-link"><span class="nk-menu-text">Image Gallery</span></a>
+                            </li>
+                            <li class="nk-menu-item">
+                                <a href="{{route('admin.testimotional')}}" class="nk-menu-link"><span class="nk-menu-text">Testimotional</span></a>
+                            </li>
+                        </ul><!-- .nk-menu-sub -->
+                    </li><!-- .nk-menu-item -->
                     <li class="nk-menu-item">
                         <a href="{{route('admin.week-pop')}}" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-bag"></em></span>

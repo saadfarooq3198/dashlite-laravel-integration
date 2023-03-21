@@ -5,7 +5,6 @@
             <div class="card-head">
                 <h5 class="card-title">Update Almayeeyah Page</h5>
             </div>
-            {{-- <h6 class="card-title">section 1</h6> --}}
             <form action="{{route('admin.update-home')}}" method="POST" enctype="multipart/form-data"  data-form="ajax-form">
                 @csrf
                 <input type="hidden" name="page" value="almayeeyah">

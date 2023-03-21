@@ -5,7 +5,6 @@
             <div class="card-head">
                 <h5 class="card-title">Update Ethos Page</h5>
             </div>
-            {{-- <h6 class="card-title">section 1</h6> --}}
             <form action="{{route('admin.update-home')}}" method="POST" enctype="multipart/form-data"  data-form="ajax-form">
                 @csrf
                 <input type="hidden" name="page" value="ethos">
@@ -24,7 +23,15 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="form-label" for="email-address-1">Section-I Heading</label>
+                            <div class="form-control-wrap">
+                                <input type="text" class="form-control" name="section_one_heading"
+                                    value="{{settings('ethos', 'section_one_heading')}}">
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-lg-12">
                         <div class="form-group">
                             <label class="form-label" for="email-address-1">Section-I description</label>
@@ -91,7 +98,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-12">
+                    {{-- <div class="col-lg-12">
                         <div class="form-group">
                             <label class="form-label" for="email-address-1">Equip description</label>
                             <div class="form-control-wrap">
@@ -99,7 +106,7 @@
                                 </textarea>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     {{-- Equip end --}} 
                      {{-- EMPOWER --}}
                      <div class="col-lg-6 mt-4">
@@ -112,7 +119,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-12">
+                    {{-- <div class="col-lg-12">
                         <div class="form-group">
                             <label class="form-label" for="email-address-1">EMPOWER description</label>
                             <div class="form-control-wrap">
@@ -120,7 +127,7 @@
                                 </textarea>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     {{-- EMPOWER end --}} 
                      {{-- Respect --}}
                      <div class="col-lg-6 mt-4">
@@ -133,7 +140,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-12">
+                    {{-- <div class="col-lg-12">
                         <div class="form-group">
                             <label class="form-label" for="email-address-1">Respect description</label>
                             <div class="form-control-wrap">
@@ -141,7 +148,7 @@
                                 </textarea>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     {{-- Respect end --}} 
                     
 

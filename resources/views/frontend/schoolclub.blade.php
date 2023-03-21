@@ -11,6 +11,23 @@
     <script src="{{ asset('/imporFunc.js') }}" defer></script>
     <script src="{{ asset('/script.js') }}" defer></script>
     <title>Tack - School Club</title>
+    <style>  
+      .school-club {
+    position: relative;
+    width: 100%;
+    background: url("{!! asset('storage/images/'.settings('school_club','section_one_image')) !!}");
+    height: 50rem;
+    background-size: cover;
+    background-position: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    margin-top: 8rem;
+}
+      </style>
 </head>
 
 <body>
@@ -87,13 +104,10 @@
   <section class="school-club">
       <div class="school-club-container">
           <div class="club-data">
-              <h2>Our After <br> School Clubs</h2>
+              <h2>{!! settings('school_club', 'section_one_heading') !!}</h2>
 
               <div class="s-club-detail">
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                      nibh euismod tincidunt ut laoreet dolore magna aliquam erat. Lorem ipsum dolor sit amet,
-                      consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                      aliquam erat.</p>
+                  <p>{!! settings('school_club', 'section_one_description') !!}</p>
               </div>
           </div>
       </div>
@@ -105,18 +119,12 @@
   <section class="club reveal">
       <div class="club-container flex-layout-c">
 
-          <div class="club-left"><img src="../img/about page/club photo.png" alt=""></div>
+          <div class="club-left"><img src="{!! asset('storage/images/'.settings('school_club','section_two_image')) !!}" alt=""></div>
 
           <div class="club-right h-white">
-              <h2>What is AlMayeeyah?</h2>
+              <h2>{!! settings('school_club', 'section_two_heading') !!}</h2>
               <img src="../img/about page/white 4 sq.svg" alt="" class="svg">
-              <p class="medium">AlMaeeyah is TACK’s new and innovatively designed after school club with the help
-                  of experts from the field of children’s education and language learning, keeping the aims young
-                  learners in after
-                  school fun in mind. AlMaeeyah after school clubs are lead by teacher’s from TACK who have
-                  undergone training specifically for the delivery of the after school programme with us. If you are
-                  interested in encouraging your school to open an TACK’s AlMaeeyah after school club, please let us
-                  know your interest and we can contact your school or if you want to encourage your school yourself,
+              <p class="medium">{!! settings('school_club', 'section_two_description') !!}
               </p>
 
               <button class=" flex-layout-c"><iconify-icon icon="material-symbols:arrow-right-alt"></iconify-icon></button>
@@ -132,7 +140,7 @@
               <hr>
           </div>
 
-          <div class="img"><img src="../img/about page/mid about img.png" alt=""></div>
+          <div class="img"><img src="{!! asset('storage/images/'.settings('school_club','section_three_image')) !!}" alt=""></div>
 
           <div class="help-btn">
               <a href="#" class="previous btn-1">Download</a>
@@ -142,16 +150,9 @@
   </section>
 
   <section class="why-us container reveal">
-      <h2>TACK School Partnership?</h2>
+      <h2>{!! settings('school_club', 'section_three_heading') !!}</h2>
 
-      <p class="medium">A TACK School Partnership is an alliance or affiliation between TACK and a school or
-          other educational organisation. It assists both partners to achieve their educational vision and contribute
-          to their mission. The TACK school partnership is an informal way for both partners to benefit from the other
-          by sharing their knowledge, experience and resources, so that they can provide better learning outcomes for
-          their students. <br> <br>
-          A partnership may not generate further income streams between the two parties though may indirectly lead to
-          further business for one or both of the parties or include activity that requires payment between the
-          parties.</p>
+      <p class="medium">{!! settings('school_club', 'section_three_description') !!}</p>
 
       <a href="#" class="b-btn">Know More</a>
 

@@ -55,4 +55,12 @@ class DashboardController extends Controller
         return view('backend.research');
     }
 
+    public function schoolClub(){
+        return view('backend.school_club');
+    }
+
+    public function weekend(){
+        return view('backend.weekend');
+    }
+
 }

@@ -53,10 +53,23 @@ Route::middleware('auth')->name('admin.')->prefix('admin')->group(function () {
     // research routes
     Route::get('research', [Backend\DashboardController::class, 'research'])->name('research');
 
+    // school club routes
+    Route::get('school-club', [Backend\DashboardController::class, 'schoolClub'])->name('school-club');
+
+    // weekend routes
+    Route::get('weekend', [Backend\DashboardController::class, 'weekend'])->name('weekend');
+    Route::get('testimotional', [Backend\EmployeeController::class, 'index'])->name('testimotional');
+    Route::get('image-gallery', [Backend\BannerController::class, 'aboutSlider'])->name('image-gallery');
     // employee routes
     Route::resource('employees', Backend\EmployeeController::class);
     Route::get('about/employee', [Backend\EmployeeController::class, 'employeeDatatable'])->name('about.employee.datatable');
-    
+
+    // our class routes
+    Route::get('static', [Backend\ClassController::class, 'static'])->name('class.static');
+    Route::resource('classes', Backend\ClassController::class);
+    Route::get('ourclass/class', [Backend\ClassController::class, 'classDatatable'])->name('class.datatable');
+
+
     // event routes
     Route::resource('events', Backend\EventController::class);
     Route::get('about/event', [Backend\EventController::class, 'eventDatatable'])->name('about.event.datatable');

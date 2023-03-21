@@ -100,10 +100,10 @@
         
         <section class="publication container reveal">
             <div class="hr-center-heading">
-                <h2> Our Publication & Resources</h2>
+                <h2> {{settings('curriculum', 'heading')}}</h2>
                 <hr></div>
     
-            <p class="medium">In order to create a fun and engaging learning environment in all of our provision, we have developed a range of curriculum resources that support the development of Arabic literacy and also to create a bilingual environment. We have also written material for teachers to support them to provide high-quality Arabic language learning settings.</p>
+            <p class="medium">{{settings('curriculum', 'description')}}</p>
     
             <img src="../img/reserch & community page/svg pink.svg" alt="" class="svg">
         </section>
@@ -113,42 +113,34 @@
         <section class="development container">
             <div class="dvlp dvlp1 m-right flex-layout-c reveal">
                 <div class="dvlp-left">
-                    <h2>Reading</h2>
+                    <h2>{{settings('curriculum', 'section_one_heading')}}</h2>
                     <img src="../img/reserch & community page/pink.svg" alt="" class="small-svg">
     
-                    <p class="medium">TACK has researched and published a series of texts to teach reading skills in Arabic. These vibrant books offer plenty of opportunities for building oral and written language as the children learn to read. <span>(Link to the Arabic Club Readers on the OUP or Amazon
-                        website)</span> <br>
-                        We have developed a method of assessing reading progress that enables teachers to
-                        match books to the level of each individual child and fine-tune reading instruction to make sure that progress is consistent and sustained.</p>
+                    <p class="medium">{{settings('curriculum', 'section_one_description')}}</p>
                 </div>
     
-                <div class="dvlp-right"><img src="../img/reserch & community page/dvlp 1.png" alt=""></div>
+                <div class="dvlp-right"><img src="{{asset('storage/images/'.settings('curriculum','section_one_image'))}}" alt=""></div>
             </div>
             <div class="dvlp dvlp2 m-left flex-layout-c reveal">
-                <div class="dvlp-right"><img src="../img/reserch & community page/dvlp 2.png" alt=""></div>
+                <div class="dvlp-right"><img src="{{asset('storage/images/'.settings('curriculum','section_two_image'))}}" alt=""></div>
     
                 <div class="dvlp-left">
-                    <h2>Learning Letters</h2>
+                    <h2>{{settings('curriculum', 'section_two_heading')}}</h2>
                     <img src="../img/reserch & community page/green.svg" alt="" class="small-svg">
     
-                    <p class="medium">Learning letter-sound relationships is a particular challenge in Arabic as each letter of the alphabet has a different grapheme when at the beginning, the middle or the end of a
-                        word. <br>
-                        TACK has developed innovative approaches to learning how to recognise Arabic letters
-                        drawing on research on how children learn to discriminate letter shapes.</p>
+                    <p class="medium">{{settings('curriculum', 'section_two_description')}}</p>
                 </div>
     
             </div>
             <div class="dvlp dvlp3 m-right flex-layout-c reveal">
                 <div class="dvlp-left">
-                    <h2>Phonics</h2>
+                    <h2>{{settings('curriculum', 'section_three_heading')}}</h2>
                     <img src="../img/reserch & community page/svg pink.svg" alt="" class="small-svg">
     
-                    <p class="medium">Phonics is an important element in the teaching of reading in all alphabetic languages. Learning the relationships between the letters we see and the speech sounds we hear is particularly important in the early stages of learning. This learning is much more effective if it is systematic. <br>
-                        TACK is researching how this can be applied to Arabic and taught systematically and
-                        thoroughly.</p>
+                    <p class="medium">{{settings('curriculum', 'section_three_description')}}</p>
                 </div>
     
-                <div class="dvlp-right"><img src="../img/reserch & community page/dvlp 3.png" alt=""></div>
+                <div class="dvlp-right"><img src="{{asset('storage/images/'.settings('curriculum','section_three_image'))}}" alt=""></div>
             </div>
         </section>
     

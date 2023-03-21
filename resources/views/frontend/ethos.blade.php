@@ -126,27 +126,8 @@
           <div class="ethos-container container grid-left-img">
               <div class="ethos-left"><img src="../img/home page/table img.png" alt=""></div>
               <div class="ethos-right">
-                  <h5 class="h-yellow">Our Ethos</h5>
-                  <p class="h-white">Our aim is to create eagerness to learn and a love of Arabic. To do this, the
-                      language learning environments we provide have to be effective and enjoyable. So we have carefully
-                      devised a range of programmes that put the learner at the heart of the curriculum.  
-                      <br>
-                      <br>
-                      Opportunities to learn include all four areas of literacy - speaking, listening, reading and
-                      writing. We ensure that learning is fun, with lots of opportunities to use Arabic in reading,
-                      writing and conversation and play contexts and so that learners will enjoy themselves, and learn the
-                      language as they do.
-                      <br>
-                      <br>
-                      We commit energy and effort to create learning attitudes in our teaching staff.  They are actively
-                      engaged in critical reflection on their practice and ongoing professional development. Support from
-                      leading experts in the field of language and literacy development enable us to offer ‘state of the
-                      art’ provision and modern learning and teaching approaches.  This ongoing collaboration between
-                      practitioners and researchers allows us to develop resources for our language learning provision.
-                      <br>
-                      <br>
-                      These values help us create independent, autonomous and self-regulating learning and enjoyable
-                      effective learning.
+                  <h5 class="h-yellow">{{settings('ethos', 'section_one_heading')}}</h5>
+                  <p class="h-white">{!! settings('ethos', 'section_one_description') !!}
                   </p>
   
                   <img src="../img/home page/4 square.svg" alt="" class="svg">
@@ -155,7 +136,7 @@
       </section>
   
       <section class="ethod-big-img container reveal">
-          <p class="md-para medium">We have identified four pillars to sustain our work, offering, strength and support to stay true to our purpose</p>
+          <p class="md-para medium">{!! settings('ethos', 'section_two_description') !!}</p>
   
           <img src="../img/home page/ethod.png" alt="">
       </section>
@@ -165,16 +146,16 @@
       <section class="engage reveal">
           <div class="engage-container">
               <div class="engage-left">
-                  <h5 class="w-heading innerTitle">ENGAGE</h5>
-                  <p class="sb-para">We engage children to support them to become involved and active in their own learning. Making enjoyment and self-regulation part of curriculum planning, we aim to instill enjoyment, engagement and pride in the Arabic language.</p>
+                  <h5 class="w-heading innerTitle">{{settings('ethos', 'engage_heading')}}</h5>
+                  <p class="sb-para">{!! settings('ethos', 'engage_description') !!}</p>
               </div>
               <div class="engage-right">
                   <!-- <img src="../img/home page/image.png" alt=""> -->
                   <ul class="engage-btn medium h-white">
-                      <li class="e-btn engage e-btn-active">engage</li>
-                      <li class="e-btn equip">equip</li>
-                      <li class="e-btn empower">empower</li>
-                      <li class="e-btn respect">respect</li>
+                      <li class="e-btn engage e-btn-active">{{settings('ethos', 'engage_heading')}}</li>
+                      <li class="e-btn equip">{{settings('ethos', 'equip_heading')}}</li>
+                      <li class="e-btn empower">{{settings('ethos', 'empower_heading')}}</li>
+                      <li class="e-btn respect">{{settings('ethos', 'respect_heading')}}</li>
                   </ul>
   
                   <div class="engage-slider flex-layout-sp">

@@ -16,6 +16,8 @@
             <select name="page_name" class="form-control" id="pagename">
                 <option {{$banner->page == 'About' ? 'selected' : ' '}} value="About">About</option>
                 <option {{$banner->page == 'Ethos' ? 'selected' : ' '}} value="Ethos">Ethos</option>
+                <option {{$banner->page == 'image_gallery' ? 'selected' : ' '}}  value="image_gallery">Image Gallery</option>
+
             </select>
         </div>
     

@@ -17,6 +17,7 @@
             <select name="page_name" class="form-control" id="pagename">
                 <option value="About">About</option>
                 <option value="Ethos">Ethos</option>
+                <option value="image_gallery">Image Gallery</option>
             </select>
         </div>
     
