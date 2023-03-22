@@ -1,22 +1,6 @@
 /* --------------------------------------------------------------------------------------------
 ------------------------------------ our classes section ------------------------------------
 -------------------------------------------------------------------------------------------- */
-.our-classes {
-    position: relative;
-    width: 100%;
-    background: url("../img/class page/image.png");
-    height: 50rem;
-    background-size: cover;
-    /* background-position: 35rem -24rem; */
-    background-position: center;
-    /* background-repeat: no-repeat; */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    margin-top: 8rem;
-}
 
 /* --------------------- online classes -------------------  */
 .our-cls-search {

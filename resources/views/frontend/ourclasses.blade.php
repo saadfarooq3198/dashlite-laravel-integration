@@ -16,6 +16,22 @@
     <script src="{{ asset('/imporFunc.js') }}" defer></script>
         <script src="{{ asset('/script.js') }}" defer></script>
     <title>Tack - Our Class</title>
+    <style>
+        .our-classes {
+    position: relative;
+    width: 100%;
+    background: url("{{asset('storage/images/'.settings('class','section_one_image'))}}");
+    height: 50rem;
+    background-size: cover;
+    background-position: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    margin-top: 8rem;
+}
+    </style>
 </head>
 
 <body>
@@ -94,21 +110,19 @@
         <!-- <div class="empty"></div> -->
         <div class="our-cls-search flex-layout-sp">
             <div class="our-cls-data">
-                <h2 class="h-white">Our Weekend  School</h2>
+                <h2 class="h-white">{{settings('class', 'section_one_heading')}}</h2>
 
                 <form action="" class="cls-form">
                     <div class="select">
                         <select>
                             <option value="London">London</option>
-
                         </select>
                     </div>
                     
                     
                     <br>
                     <p class="white">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        {!! settings('class', 'section_one_description') !!}
                     </p>
 
                     <button type="submit" class="rounded-btn">Submit</button>
@@ -151,25 +165,11 @@
 
     <section class="baby container reveal">
         <div class="baby-left">
-            <h2>The Arabic Club for Babies and <br>Toddlers TACK babies?</h2>
-            <h5>Private Tution</h5>
-
-            <p>We also cater to requests for private tuition. Private tuition is usually given at the child’s home. An
-                allocated responsible parent/guardian/carer would need to be at the residence throughout the time that
-                private tuition is given. Our private tuition tailors learning towards individual children and small
-                group learning, including planning and review supporting the teaching.
-
-                <span>Our current fees for private tuition are generally:</span>
-            </p>
-
-            <p class="para-detail">1:1, 55 pounds/hour + transport <br>
-                2:1, 65 pounds/hour (or 32.5 pounds/child) + transport~ <br>
-                larger groups - please email us to discuss further. <br>
-            </p>
-
+            <h2>{{settings('class', 'section_two_heading')}}</h2>
+            {!! settings('class', 'section_two_description') !!}
         </div>
 
-        <div class="baby-right"><img src="../img/class page/baby boy.png" alt=""></div>
+        <div class="baby-right"><img src="{{asset('storage/images/'.settings('curriculum','section_three_image'))}}" alt=""></div>
     </section>
 
     <section class="grey-note reveal">
@@ -373,7 +373,6 @@
 
   <script>
     ScrollReveal().reveal('.reveal', { delay: 500 });
-
 
 let btn1 = document.querySelector('.cls-btn1')
 let btn2 = document.querySelector('.cls-btn2')

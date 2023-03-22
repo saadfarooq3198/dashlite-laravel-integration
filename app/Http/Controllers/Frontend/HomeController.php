@@ -6,6 +6,7 @@ use App\Models\Event;
 use App\Models\Banner;
 use App\Models\Setting;
 use App\Models\Employee;
+use App\Models\OurClass;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -48,7 +49,8 @@ class HomeController extends Controller
     }
 
     public function class(){
-        return view('frontend.ourclasses');
+        $classes = OurClass::all();
+        return view('frontend.ourclasses', compact('classes'));
     }
 
     public function partnerPage(){
