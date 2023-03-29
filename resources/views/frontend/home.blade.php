@@ -1,71 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
 
-  @extends('frontend.layouts.app')
-  @section('content')
-  <div class="sticky-menu">
-    <!-- --------------- menu ------------------  -->
-    <div class="tabber">
-      <label for="tab-checkbox" class="tab-menu"><img src="../img/menu img/menu.svg" class="menu-svg" alt=""></label>
-      <input type="checkbox" name="tab-checkbox" id="tab-checkbox" class="tab-checkbox">
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ asset('style/home.css') }}" />
+  <link rel="stylesheet" href="{{ asset('style/resuable.css') }}" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="{{ asset('/imporFunc.js') }}" defer></script>
+  <script src="{{ asset('/script.js') }}" defer></script>
+  <title>Tack - Home</title>
+</head>
 
-    <!-- ---------------- navigation --------------------- -->
-    <div class="sticky-navigation">
-      <ul class="tab-imgs">
-        <!-- 1 img  -->
-        <li class="tab-img "><img src="../img/menu img/top 1.svg" class="my-svg hoverImg"  data-title-id="title-1" alt="">
-          <div class="title-cont" id="title-1">
-            <p class=" bold title title-right"> <img src="../img/menu img/stick.svg" class="stick" alt=""> Our Weekend School 1</p>
+<body>
+  <!-- ------------------ navbar starts ---------------------------  -->
+  @include("frontend.layouts.header")
 
-          <ul class="tab-ul">
-            <li class="tab-li md-para"><a href="#" class="tab-link h-red">School Value</a></li>
-            <li class="tab-li md-para"><a href="#" class="tab-link h-red">Newsletter</a></li>
-            <li class="tab-li md-para"><a href="#" class="tab-link h-red">Photogallery</a></li>
-            <li class="tab-li md-para"><a href="#" class="tab-link h-red">Testimonials & review</a></li>
-          </ul>
-          </div>
-        </li>
-        <!-- 2nd img -->
-        <li class="tab-img"><img src="../img/menu img/top 2.svg" class="my-svg hoverImg" data-title-id="title-2" alt="">
-          <div class="title-cont" id="title-2">
-            <p class=" bold title title-right"> <img src="../img/menu img/stick.svg" class="stick" alt=""> Our Weekend School 2</p>
+  <!-- ------------------------ navbar end --------------------------  -->
 
-          <ul class="tab-ul">
-            <li class="tab-li md-para"><a href="#" class="tab-link h-green">School Value</a></li>
-            <li class="tab-li md-para"><a href="#" class="tab-link h-green">Newsletter</a></li>
-            <li class="tab-li md-para"><a href="#" class="tab-link h-green">Photogallery</a></li>
-            <li class="tab-li md-para"><a href="#" class="tab-link h-green">Testimonials & review</a></li>
-          </ul>
-          </div>
-        </li>
-        <!-- 3rd img -->
-        <li class="tab-img"><img src="../img/menu img/top 3.svg" class="my-svg hoverImg" data-title-id="title-3" alt="">
-          <div class="title-cont" id="title-3">
-            <p class=" bold title title-right"> <img src="../img/menu img/stick.svg" class="stick" alt=""> Our Weekend School 3</p>
-
-          <ul class="tab-ul">
-            <li class="tab-li md-para"><a href="#" class="tab-link h-blue">School Value</a></li>
-            <li class="tab-li md-para"><a href="#" class="tab-link h-blue">Newsletter</a></li>
-            <li class="tab-li md-para"><a href="#" class="tab-link h-blue">Photogallery</a></li>
-            <li class="tab-li md-para"><a href="#" class="tab-link h-blue">Testimonials & review</a></li>
-          </ul>
-          </div>
-        </li>
-        <!-- 4th img  -->
-        <li class="tab-img"><img src="../img/menu img/top 4.svg" class="my-svg hoverImg"data-title-id="title-4" alt="">
-          <div class="title-cont" id="title-4">
-            <p class=" bold title title-right"> <img src="../img/menu img/stick.svg" class="stick" alt=""> Our Weekend School 4</p>
-
-          <ul class="tab-ul">
-            <li class="tab-li md-para"><a href="#" class="tab-link h-yellow">School Value</a></li>
-            <li class="tab-li md-para"><a href="#" class="tab-link h-yellow">Newsletter</a></li>
-            <li class="tab-li md-para"><a href="#" class="tab-link h-yellow">Photogallery</a></li>
-            <li class="tab-li md-para"><a href="#" class="tab-link h-yellow">Testimonials & review</a></li>
-          </ul>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <!-- ---------------------------- responsive bar ----------------------------  -->
+ @include('frontend.partials.sticky_menu')
 
 
 
@@ -73,16 +28,10 @@
 
   <div class="swiper mySwiper backimg">
     <div class="swiper-wrapper">
-              <div class="swiper-slide flex-box"><img src="{{asset('storage/images/'.settings('home','banner'))}}" alt="">
+      @foreach ($banners as $banner)
+      <div class="swiper-slide flex-box"><img src="{{asset('storage/images/'.$banner->banner)}}" alt="">
       </div>
-      {{-- <div class="swiper-slide flex-box"><img src="../img/home page/slide pic 2.png" alt="">
-    </div>
-      <div class="swiper-slide flex-box"><img src="../img/home page/slide pic 3.png" alt="">
-     </div>
-      <div class="swiper-slide flex-box"><img src="../img/home page/slide pic 3.png" alt="">
-      </div>
-      <div class="swiper-slide flex-box"><img src="../img/home page/slide pic 3.png" alt="">
-      </div> --}}
+      @endforeach
     </div>
     <div class="swiper-pagination"></div>
     <div class="shadowbg"></div>
@@ -167,8 +116,92 @@
   </section>
 
   <!-- ---------------------------- landing page card end ---------------------------  -->
-  @endsection
 
+
+
+
+
+
+  <!-- ---------------------------- Footer start ---------------------------  -->
+  <footer class="footer reveal">
+    <div class="footer-container container">
+      <!-- social media start ----------------- -->
+      <a href="#header" class="upperLink"><iconify-icon icon="material-symbols:keyboard-arrow-up-rounded"></iconify-icon></a>
+      <div class="f-header">
+        <div class="f-logo">
+          <img src="../img/home page/footer.svg" alt="footer logo">
+          <div>
+            <p class="s-para">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+              tincidunt ut laoreet dolore magna aliquam erat.</p>
+          </div>
+        </div>
+        <ul class="social-media">
+          <li class="media-icon"><a href="" class="media-link"><iconify-icon
+                icon="ic:round-facebook"></iconify-icon></a></li>
+          <li class="media-icon"><a href="" class="media-link"><iconify-icon
+                icon="entypo-social:twitter-with-circle"></iconify-icon></a></li>
+          <li class="media-icon"><a href="" class="media-link"><iconify-icon
+                icon="bxl:instagram-alt"></iconify-icon></a></li>
+          <li class="media-icon"><a href="" class="media-link"><iconify-icon
+                icon="entypo-social:linkedin-with-circle"></iconify-icon></a></li>
+        </ul>
+      </div>
+      <!-- end of social media --------------------- -->
+
+      <div class="f-middle">
+        <!-- ------------ number section ------------------  -->
+        <div class="number-section">
+          <h5 class="semi-bold m-2">For enquiries: <span>02079939010</span></h5>
+          <h5 class="semi-bold m-2">For in school enquiries: <span> 07958 072 782</span></h5>
+
+          <div class="search-div reverse">
+            <h5 class="semi-bold m-2">Subscribe to Newsletter</h5>
+
+            <form action="" class="newsletter">
+              <input type="text" name="" id="search-input" placeholder="Email">
+              <button type="submit" class="submit-btn">Submit <iconify-icon
+                  icon="material-symbols:arrow-right-alt-rounded"></iconify-icon></button>
+            </form>
+          </div>
+        </div>
+
+        <!-- ------------- nav-link --------------  -->
+        <ul class="f-nav">
+          <h5 class="semi-bold m-2">Quick Links</h5>
+          <li class="f-nav-list"><a href="#" class="f-nav-link">Home</a></li>
+          <li class="f-nav-list"><a href="#" class="f-nav-link s-link">Our Commitment to
+              Research & Development
+            </a></li>
+          <li class="f-nav-list"><a href="#" class="f-nav-link">Our Ethos</a></li>
+          <li class="f-nav-list"><a href="#" class="f-nav-link">Our Curriculum</a></li>
+          <li class="f-nav-list"><a href="#" class="f-nav-link">Contact Us</a></li>
+
+        </ul>
+      </div>
+      
+      <!-- --------------- middle end -----------------  -->
+      <div class="f-footer center">
+        <ul class="terms flex-box gap">
+          <li class="term-list"><a href="#" class="term-link">Terms of Use</a></li>
+          <li class="term-list"><a href="#" class="term-link">Privacy Policy</a></li>
+          <li class="term-list"><a href="#" class="term-link">Cookie Settings</a></li>
+        </ul>
+
+        <div class="reserve">
+          <p>© 2022 TACK design, all rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ---------------------------- necessary js ---------------------------  -->
+  <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <!-- <script src="../script.js"></script> -->
+  <script src="../scrolll.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
 
   <script>
     ScrollReveal().reveal('.reveal', { delay: 500 });
@@ -184,5 +217,6 @@
     },
 });
   </script>
+</body>
 
 </html>

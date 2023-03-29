@@ -15,6 +15,7 @@
         <div class="form-group">
             <label class="form-label" for="pagename">Select Page</label>
             <select name="page_name" class="form-control" id="pagename">
+                <option value="Home">Home</option>
                 <option value="About">About</option>
                 <option value="Ethos">Ethos</option>
                 <option value="image_gallery">Image Gallery</option>

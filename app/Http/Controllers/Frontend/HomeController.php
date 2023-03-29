@@ -13,7 +13,8 @@ use App\Http\Controllers\Controller;
 class HomeController extends Controller
 {
     public function index(){
-        return view('frontend.home');
+        $banners = Banner::where('page', 'Home')->take(5)->get();
+        return view('frontend.home', compact('banners'));
     }
 
     public function about(){

@@ -10,12 +10,11 @@
                 @csrf
                 <input type="hidden" name="page" value="home">
                 <div class="row g-4">
-                    <div class="col-lg-2">
+                    {{-- <div class="col-lg-2">
                         <label class="form-label" for="customFileLabel">Upload Banner</label>
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
-                            {{-- <label class="form-label" for="customFileLabel">Upload Banner</label> --}}
                             <div class="form-control-wrap">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" name="banner" id="customFile">
@@ -24,7 +23,7 @@
                             </div>
                         </div>
                     </div>
-                    <br>
+                    <br> --}}
                     
                     {{-- section 1 --}}
                     <div class="col-lg-6">
