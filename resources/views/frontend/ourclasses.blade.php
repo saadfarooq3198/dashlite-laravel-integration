@@ -189,7 +189,7 @@
                         adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
                         dolore magna aliquam erat. 1</p>
 
-                    <a href="#" class="cls-ges-btn sb-para">Explore fees structure</a>
+                    <a href="{{route('freestruc')}}" class="cls-ges-btn sb-para">Explore fees structure</a>
                 </div>
             </div>
             <div class="cls-main-data" id="cls-main-data2"> 

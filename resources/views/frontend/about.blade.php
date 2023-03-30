@@ -227,7 +227,7 @@
             </div>
         </div>
 
-        <a href="#" class="ex-btn">Explore More</a>
+        <a href="{{route('research')}}" class="ex-btn">Explore More</a>
     </section>
 
 

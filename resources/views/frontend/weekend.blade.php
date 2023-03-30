@@ -17,6 +17,7 @@
 <body>
     @include("frontend.layouts.header")
     <!-- ------------------------- stikcy mnu -----------------------  -->
+    @include('frontend.partials.sticky_menu')
   <!-- ------------------------- end -----------------------  -->
     <!-- --------------------------- main code starts here ---------------------------------------  -->
 

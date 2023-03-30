@@ -28,7 +28,7 @@
             <p class=" bold title title-right"> <img src="../img/menu img/stick.svg" class="stick" alt="">Our After School Clubs</p>
 
           <ul class="tab-ul">
-            <li class="tab-li md-para"><a href="#" class="tab-link h-green">What is AlMayeeyah?</a></li>
+            <li class="tab-li md-para"><a href="{{route('almayeeyah')}}" class="tab-link h-green">What is AlMayeeyah?</a></li>
             <li class="tab-li md-para"><a href="#" class="tab-link h-green"> Information for Schools</a></li>
             <li class="tab-li md-para"><a href="#" class="tab-link h-green">Information for Parents</a></li>
             <li class="tab-li md-para"><a href="#" class="tab-link h-green">Partnership</a></li>
@@ -41,10 +41,10 @@
             <p class=" bold title title-right"> <img src="../img/menu img/stick.svg" class="stick" alt="">Our Ethos</p>
 
           <ul class="tab-ul">
-            <li class="tab-li md-para"><a href="#" class="tab-link h-blue">Engage</a></li>
-            <li class="tab-li md-para"><a href="#" class="tab-link h-blue">Equip</a></li>
-            <li class="tab-li md-para"><a href="#" class="tab-link h-blue">Empower</a></li>
-            <li class="tab-li md-para"><a href="#" class="tab-link h-blue">Respect</a></li>
+            <li class="tab-li md-para"><a href="{{route('ethos')}}" class="tab-link h-blue">Engage</a></li>
+            <li class="tab-li md-para"><a href="{{route('ethos')}}" class="tab-link h-blue">Equip</a></li>
+            <li class="tab-li md-para"><a href="{{route('ethos')}}" class="tab-link h-blue">Empower</a></li>
+            <li class="tab-li md-para"><a href="{{route('ethos')}}" class="tab-link h-blue">Respect</a></li>
           </ul>
           </div>
         </li>
